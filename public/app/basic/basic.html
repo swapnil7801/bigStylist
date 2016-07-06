@@ -1,0 +1,38 @@
+<ul class="nav nav-tabs">
+	<li class="">
+		<a href="/social">Social</a>
+	</li>
+	<li>
+		<a href="/mail">Mail</a>
+	</li>
+	<li class="">
+		<a href="/payment">Payment</a>
+	</li>
+	<li class="">
+		<a href="/storage">Storage</a>
+	</li>
+	<li class="active">
+		<a href="/basic">Basic</a>
+	</li>
+</ul>
+<div>
+	<div>
+		<table class = "table">
+	   		<caption>Basic Configurations</caption>
+	   		<thead>
+		      <tr>
+		         <th>Key</th>
+		         <th>Value</th>
+		      </tr>
+	   		</thead>
+	   		<tbody>
+	   		<tr ng-repeat="configRecord in basicCtrl.info.configRecords">
+		        <td>{{configRecord.key}}</td>
+		        <td>{{configRecord.value}}</td>
+		    </tr>
+		    </tbody>
+		</table>
+	</div>
+	<div><!-- {{basicCtrl.info.configRecords}} -->	  
+	</div>
+	</div>

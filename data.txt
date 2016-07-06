@@ -1,0 +1,1 @@
+"{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"passport\":{\"user\":{\"email\":\"swapnilw243@gmail.com\",\"password\":\"$2a$10$nQXbgVwCM4I0XpKAren1tOiNbQbOaCZhEdPj7PIWq6CT.yu/NPvnC\",\"usertype\":\"user\",\"_id\":\"5767b29816e46ce01d48b7a4\",\"__v\":0,\"createdon\":\"2016-06-20T09:08:40.295Z\"}}}"

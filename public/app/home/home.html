@@ -1,0 +1,170 @@
+	<!-- 	<div class="col-md-9"> -->
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="/social">Social</a>
+				</li>
+				<li>
+					<a href="/mail">Mail</a>
+				</li>
+				<li class="">
+					<a href="/payment">Payment</a>
+				</li>
+				<li class="">
+					<a href="/storage">Storage</a>
+				</li>
+				<li class="">
+					<a href="/basic">Basic</a>
+				</li>
+			</ul>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						Facebook
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<form name="userForm1" novalidate>
+						 <div class="col-sm-2" style="padding-left: 5%;"><!-- style="display:table-cell; vertical-align:middle; text-align:center;border: 1px ;" -->
+							<img src="../assets/images/rsz_facebook2.png" class="img-responsive img-rounded">
+						</div>
+						 <!-- <div class="col-sm-2">
+		          <button class="btn btn-round btn-social-icon btn-facebook">
+		           	<i class="fa fa-facebook"></i>
+		          </button>
+             </div> -->
+						<div class="col-sm-10">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<input type="text" class="form-control" name="FBAppId" ng-model="homeCtrl.facebook_app_id_value" ng-disabled="homeCtrl.showFb" value="" placeholder="App Id" required>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<input type="text" class="form-control" name="FBAppSecret" ng-model="homeCtrl.facebook_app_secret_value" ng-disabled="homeCtrl.showFb" value="" placeholder="App Secret" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<input type="email" class="form-control" name="FBCallbackUrl" ng-model="homeCtrl.facebook_callbackurl_value" ng-disabled="homeCtrl.showFb"value="" placeholder="Callback Url" required>
+									</div>
+								</div>
+							</div>
+						</div>
+						</form>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<div class="btn-group pull-right">
+						<button type="button" name="SaveFb" class="btn btn-primary btn-sm" ng-hide="homeCtrl.showFb"
+						style="margin-right:5px;width:61px;height:30px;"ng-click="homeCtrl.saveSocailData('facebook')">Save</button>
+						<button type="button" name="CancelFb" class="btn btn-danger btn-sm" ng-hide="homeCtrl.showFb" ng-click="homeCtrl.toggleFlag('facebook')">Cancel</button>
+						<button type="button" name="EditFb" class="btn btn-warning btn-sm" ng-show="homeCtrl.showFb" ng-click="homeCtrl.toggleFlag('facebook')" style="width:61px;height:30px;"> Edit </button>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						Twitter
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-sm-2" style="padding-left: 5%;"><!-- style="display:table-cell; vertical-align:middle; text-align:center;border: 1px ;" -->
+							<img src="../assets/images/rsz_twitter_1.png" class="img-responsive img-rounded">
+						</div>
+						<!--  <div class="col-sm-2">
+		          <button class="btn btn-round btn-social-icon btn-twitter">
+		           	<i class="fa fa-twitter"></i>
+		          </button>
+             </div> -->
+						<div class="col-sm-10">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<input type="text" class="form-control" name="TWAppId" ng-model="homeCtrl.twitter_app_id_value" ng-disabled="homeCtrl.showTw" value="" placeholder="App Id" required>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<input type="text" class="form-control" name="TWAppSecret" ng-model="homeCtrl.twitter_app_secret_value" ng-disabled="homeCtrl.showTw" value="" placeholder="App Secret" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<input type="email" class="form-control" name="TWCallbackUrl" ng-model="homeCtrl.twitter_callbackurl_value" ng-disabled="homeCtrl.showTw"value="" placeholder="Callback Url" required>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<div class="btn-group pull-right">
+						<button type="button" name="SaveFb" class="btn btn-primary btn-sm" ng-hide="homeCtrl.showTw"
+						style="margin-right:5px;width:61px;height:30px;">Save</button>
+						<button type="button" name="CancelFb" class="btn btn-danger btn-sm" ng-hide="homeCtrl.showTw" ng-click="homeCtrl.toggleFlag('twitter')">Cancel</button>
+						<button type="button" name="EditFb" class="btn btn-warning btn-sm" ng-show="homeCtrl.showTw" ng-click="homeCtrl.toggleFlag('twitter')" style="width:61px;height:30px;"> Edit </button>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						Google
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-sm-2" style="padding-left: 5%;">
+							<img src="../assets/images/rsz_google-plus_1.png" class="img-responsive img-rounded">
+						</div>
+						 <!-- <div class="col-sm-2">
+		          <button class="btn btn-round btn-social-icon btn-google-plus">
+		           	<i class="fa fa-google-plus"></i>
+		          </button>
+             </div> -->
+						<div class="col-sm-10">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<input type="text" class="form-control" name="GPlusAppId" ng-disabled="homeCtrl.showGPlus" ng-model="homeCtrl.google_app_id_value" value="" placeholder="App Id" required>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<input type="text" class="form-control" name="GplusAppSecret" ng-disabled="homeCtrl.showGPlus" ng-model="homeCtrl.google_app_secret_value" value="" placeholder="App Secret" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<input type="email" class="form-control" name="GPlusCallbackUrl" ng-disabled="homeCtrl.showGPlus"value="" ng-model="homeCtrl.google_callbackurl_value" placeholder="Callback Url" required>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<div class="btn-group pull-right">
+						<button type="button" name="SaveFb" class="btn btn-primary btn-sm" ng-hide="homeCtrl.showGPlus" style="margin-right:5px;width:61px;height:30px;">Save</button>
+						<button type="button" name="CancelFb" class="btn btn-danger btn-sm" ng-hide="homeCtrl.showGPlus" ng-click="homeCtrl.toggleFlag('google-plus')">Cancel</button>
+						<button type="button" name="EditFb" class="btn btn-warning btn-sm" ng-show="homeCtrl.showGPlus" ng-click="homeCtrl.toggleFlag('google-plus')" style="width:61px;height:30px;"> Edit </button>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		<!-- </div> -->
+	<!-- </div> -->
+<!-- </div> -->
+

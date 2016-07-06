@@ -1,0 +1,29 @@
+Changes
+-added 'seed' folder in root dir
+-added 'loadSeedData.js' in root dir
+-added 'seed.js' in scripts dir
+
+
+
+commands --
+node loadSeedData.js
+
+removed the 'backend_' prefix from Env variables
+
+
+
+Steps-->
+
+1) Add Env variables -
+   -db_host=localhost
+   -db_name=_____
+   -db_port=27017
+   -db_url=localhost:27017/________
+   -node_app_ip-127.0.0.1
+   -node_app_port=8000
+   -node_app_use=http
+2)start mongod process
+
+3) type  --node loadSeedData.js
+
+

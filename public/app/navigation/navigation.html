@@ -1,0 +1,24 @@
+<div class="panel panel-default" ng-controller="NavigationController as navigationCtrl" ng-show="navigationCtrl.loggedInUser!=null">
+                    <div class="panel-heading" style="padding-left:20%">
+                  <!--  <span class="glyphicon glyphicon-th"></span>  -->
+                        Admin Portal
+                    </div>
+                   <!--  <div class="panel-collapse collapse in">
+                       <ul class="list-group">
+                        <li class="list-group-item" ng-class="{active: navigationCtrl.$route.current.activetab == 'home'}" style="padding-left:20%"><i class="glyphicon glyphicon-th"></i><a href="/home" title="" style="margin-left:5%;">Configuration</a></li>
+                        <li class="list-group-item" ng-class="{active: navigationCtrl.$route.current.activetab == 'import'}" style="padding-left:20%"><span class="glyphicon glyphicon-import"></span><a href="/import" title="" style="margin-left:5%">Import Data</a></li>
+                        <li class="list-group-item" ng-class="{active: navigationCtrl.$route.current.activetab == 'export'}" style="padding-left:20%"><span class="glyphicon glyphicon-export"></span><a href="/export" title="" style="margin-left:5%">Export Data</a></li>
+                        <li class="list-group-item" ng-class="{active: navigationCtrl.$route.current.activetab == 'emailtemplate'}" style="padding-left:20%"><span class="glyphicon glyphicon-file"></span><a href="/emailtemplate" title="" style="margin-left:5%">Email Template</a></li>
+                        <li class="list-group-item" ng-class="{active: navigationCtrl.$route.current.activetab == 'backup'}" style="padding-left:20%"><span class="glyphicon glyphicon-retweet"></span><a href="/backup" title="" style="margin-left:5%">Data Backup</a></li>
+                    </ul> 
+                    </div> -->
+                    <div class="list-group">
+                        <a class="list-group-item"  ng-class="{active: navigationCtrl.$route.current.activetab == 'home'}" href="/home"><span class="glyphicon glyphicon-th" style="margin-left:5%;margin-right:5%"> Configuration</span></a>
+
+                        <a class="list-group-item"  ng-class="{active: navigationCtrl.$route.current.activetab == 'import'}" href="/import"><span class="glyphicon glyphicon-import" style="margin-left:5%;margin-right:5%"> Import Data </span></a>
+                         <a class="list-group-item"  ng-class="{active: navigationCtrl.$route.current.activetab == 'export'}" href="/export"><span class="glyphicon glyphicon-export" style="margin-left:5%;margin-right:5%"> Export Data </span></a>
+                         <a class="list-group-item"  ng-class="{active: navigationCtrl.$route.current.activetab == 'emailtemplate'}" href="/emailtemplate"><span class="glyphicon glyphicon-file" style="margin-left:5%;margin-right:5%;"> Email Template</span></a>
+                         <a class="list-group-item"  ng-class="{active: navigationCtrl.$route.current.activetab == 'backup'}" href="/backup"><span class="glyphicon glyphicon-retweet" style="margin-left:5%;margin-right:5%;"> Data Backup</span></a>
+                                                
+                    </div>
+                </div>

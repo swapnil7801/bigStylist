@@ -1,0 +1,140 @@
+ 
+ <div class="panel panel-default">
+ 	<div class="panel-heading">
+		<h3 class="panel-title">
+		Data Backup Details  
+		</h3>
+	</div>
+	<div class="panel-body">
+		<div ng-if="backupCtrl.isEdit">
+			<form class="form-inline">
+			 	<div class="form-group" style="display:inline">
+			 		<span >Every :</span>
+			 		
+				 		<select name="when_to" class="form-control" ng-model="backupCtrl.when_to" >
+				 			<option value="Day"> Day </option>
+				 			<option value="Week"> Week </option>
+				 			<option value="Month"> Month </option>
+				 		</select>
+				 		
+				 		<div class="select-options" style="margin-top:2%;display:inline-block">
+				 	
+				 		  <div style="display:inline-block" ng-if ="backupCtrl.when_to==='Week'">
+				 		  	<span > on </span>
+				 		  
+				 		  
+				 			<select name="days" class="form-control">
+				 				<option value="0">Sunday</option>
+				 				<option value="1">Monday</option>
+				 				<option value="2">Tuesday</option>
+				 				<option value="3">Wednesday</option>
+				 				<option value="4">Thursday</option>
+				 				<option value="5">Friday</option>
+				 				<option value="6">saturday</option>
+				 			</select>
+				 		  </div>
+
+				 		  <div style="display:inline-block" ng-if="backupCtrl.when_to=='Month'">
+				 		  	<span > on the </span>
+				 			<select name="week" class="form-control">
+				 				<option value="0">1st</option>
+				 				<option value="1">2nd</option>
+				 				<option value="2">3rd</option>
+				 				<option value="3">4th</option>
+				 				<option value="4">5th</option>
+				 				<option value="5">6th</option>
+				 				<option value="6">7th</option>
+				 				<option value="7">8st</option>
+				 				<option value="8">9nd</option>
+				 				<option value="9">10rd</option>
+				 				<option value="10">11th</option>
+				 				<option value="11">12th</option>
+				 				<option value="12">13th</option>
+				 				<option value="13">14th</option>
+				 				<option value="14">15st</option>
+				 				<option value="15">16nd</option>
+				 				<option value="16">17rd</option>
+				 				<option value="17">18th</option>
+				 				<option value="18">19th</option>
+				 				<option value="19">20th</option>
+				 				<option value="20">21st</option>
+				 				<option value="21">22nd</option>
+				 				<option value="22">23rd</option>
+				 				<option value="23">24th</option>
+				 				<option value="24">25th</option>
+				 				<option value="25">26st</option>
+				 				<option value="26">27th</option>
+				 				<option value="27">28th</option>
+				 				<option value="28">29th</option>
+				 				<option value="29">30th</option>
+				 				<option value="30">31st</option>
+				 			</select>
+				 		  </div>
+
+				 		<span > at :</span>
+				 		<select name="hours" class="form-control">
+				 			<option value="0"> 0 </option>
+				 			<option value="1"> 1 </option>
+				 			<option value="2"> 2 </option>
+				 			<option value="3"> 3 </option>
+				 			<option value="4"> 4 </option>
+				 			<option value="5"> 5 </option>
+				 			<option value="6"> 6 </option>
+				 			<option value="7"> 7 </option>
+				 			<option value="8"> 8 </option>
+				 			<option value="9"> 9 </option>
+				 			<option value="10"> 10 </option>
+				 			<option value="11"> 11 </option>
+				 			<option value="12"> 12 </option>
+				 			<option value="13"> 13 </option>
+				 			<option value="14"> 14 </option>
+				 			<option value="15"> 15 </option>
+				 			<option value="16"> 16 </option>
+				 			<option value="17"> 17 </option>
+				 			<option value="18"> 18 </option>
+				 			<option value="19"> 19 </option>
+				 			<option value="20"> 20 </option>
+				 			<option value="21"> 21 </option>
+				 			<option value="22"> 22 </option>
+				 			<option value="23"> 23 </option>
+				 		</select>
+				 		: <select name="mins" class="form-control">
+				 			<option value="0"> 0 </option>
+				 			<option value="5"> 5 </option>
+				 			<option value="10"> 10 </option>
+				 			<option value="15"> 15 </option>
+				 			<option value="20"> 20 </option>
+				 			<option value="25"> 25 </option>
+				 			<option value="30"> 30 </option>
+				 			<option value="35"> 35 </option>
+				 			<option value="40"> 40 </option>
+				 			<option value="45"> 45 </option>
+				 			<option value="50"> 50 </option>
+				 			<option value="55"> 55 </option>
+				 			
+				 		</select>
+
+
+				 		</div>
+				 		
+			 	</div>
+			 </form> 
+		</div>
+
+		<div ng-if="!backupCtrl.isEdit">
+			<p>Backup Frequency: </p> 
+		</div>
+	</div>
+	<div class="panel-footer">
+					<div class="btn-group pull-right">
+						<button type="button" name="Savebackup" class="btn btn-primary btn-sm" ng-hide="backupCtrl.showEditBtn" 
+						style="margin-right:8px;" ng-click="backupCtrl.savebackupData()">Save Details</button><!-- style="margin-right:5px;width:61px;height:30px;" -->
+						<button type="button" name="Cancelbackup" class="btn btn-danger btn-sm" ng-hide="backupCtrl.showEditBtn" ng-click="backupCtrl.toggleFlag('edit_button')">Cancel</button>
+						<button type="button" name="Editbackup" class="btn btn-warning btn-sm" ng-show="backupCtrl.showEditBtn" ng-click="backupCtrl.toggleFlag('edit_button')"> Edit Frequency</button>
+						<!-- style="width:61px;height:30px;" -->
+					</div>
+					<div class="clearfix"></div>
+				</div>
+ </div>  
+   
+

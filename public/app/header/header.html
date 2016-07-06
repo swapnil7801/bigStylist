@@ -1,0 +1,22 @@
+<div class="header" ng-controller="HeaderController as headerCtrl">
+        <div class="row">
+             <div class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand">Admin Portal</a>
+                    </div>
+                      <div class="col-xs-2 col-md-2 pull-right" ng-show="headerCtrl.loggedInUser!=null" style="padding-top:1%">
+                       <button type="button" class="btn" data-ng-click="headerCtrl.logoutUser()">Logout</button> 
+                      <!--  <span data-ng-click="headerCtrl.logoutUser()" class="btn ">Logout </span> --> 
+
+                    </div> 
+                </div>
+            </div>
+        </div>   
+    </div>

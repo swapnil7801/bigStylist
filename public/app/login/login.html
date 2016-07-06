@@ -1,0 +1,16 @@
+<!-- <div class="container"> -->
+    <div class="col-sm-6" style="padding-left:15%;padding-top:20%;;">
+    <form name="LoginForm" class="form-signin" novalidate="">
+        <h4 class="form-signin-heading">Please sign in</h4>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input name="email" type="text" data-ng-model="loginCtrl.loginField.email" id="inputEmail" class="form-control" placeholder="Email address" required="" data-ng-pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" style="margin-bottom:5%">
+        <span data-ng-if="(LoginForm.$submitted || LoginForm.email.$touched) && LoginForm.email.$error.required" class="error-block">Email Address Required.</span>
+        <span data-ng-if="(LoginForm.$submitted || LoginForm.email.$touched) && LoginForm.email.$error.pattern" class="error-block">Enter valid email address.</span>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input name="password" data-ng-model="loginCtrl.loginField.password" data-ng-min-length="8" type="password" id="inputPassword" class="form-control" placeholder="Password" required=""style="margin-bottom:5%">
+        <span data-ng-if="(LoginForm.$submitted || LoginForm.password.$touched) && LoginForm.password.$error.required" class="error-block">Password Required.</span>
+
+        <button class="btn btn-lg btn-primary btn-block" data-ng-click="loginCtrl.submitForm(LoginForm)" type="submit">Sign in</button>
+    </form>
+    </div>
+<!-- </div> -->

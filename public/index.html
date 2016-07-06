@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Admin Portal</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="assets/lib/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="assets/lib/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css styles/main.css -->
+   <link rel="stylesheet" href="assets/css/main.css">
+    <!-- endbuild -->
+    <base href="/index.html">
+</head>
+
+<body ng-app="angularApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Add your site or application content here -->
+<!--     <div dw-loading="commonLoader" dw-loading-options="options"></div> -->
+    <!--  <div class="header">
+        <div class="row">
+             <div class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand">angularApp</a>
+                    </div>
+                      <div class="col-xs-2 col-md-2 pull-right">
+                        <span data-ng-click="">Logout </span>
+                    </div> 
+                </div>
+            </div>
+        </div>   
+    </div> -->
+         
+   <div ng-include="'app/header/header.html'"></div> 
+    <div class="container">
+        <div class="row"    >
+            <div class="col-md-3">
+                 <div ng-include="'app/navigation/navigation.html'" scope="" onload=""></div> 
+                <!-- <div class="panel panel-default" ng-show="true">
+                    <div class="panel-heading" style="padding-left:20%">
+                   <span class="glyphicon glyphicon-th"></span> 
+                        Admin Portal
+                    </div>
+                      <ul class="list-group">
+                        <li class="list-group-item" style="padding-left:20%"><spam class="glyphicon glyphicon-th"></spam><a href="/home" title="" style="margin-left:5%">Configuration</a></li>
+                        <li class="list-group-item" style="padding-left:20%"><spam class="glyphicon glyphicon-import"></spam><a href="/import" title="" style="margin-left:5%">Import Data</a></li>
+                        <li class="list-group-item" style="padding-left:20%"><spam class="glyphicon glyphicon-export"></spam><a href="" title="" style="margin-left:5%">Export Data</a></li>
+                        <li class="list-group-item" style="padding-left:20%"><spam class="glyphicon glyphicon-file"></spam><a href="" title="" style="margin-left:5%">Email Template</a></li>
+                        <li class="list-group-item" style="padding-left:20%"><spam class="glyphicon glyphicon-retweet"></spam><a href="" title="" style="margin-left:5%">Data Backup</a></li>
+                    </ul>
+                </div> -->
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div ng-view="" dw-loading-options="{active: false,text:''}" dw-loading="commonLoader"></div>         
+               </div> 
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <p></p>
+        </div>
+    </div>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+    // !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+    // (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+    // r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+    // }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    // ga('create', 'UA-XXXXX-X');
+    // ga('send', 'pageview');
+    </script>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="assets/lib/jquery/dist/jquery.js"></script>
+    <script src="assets/lib/angular/angular.js"></script>
+    <script src="assets/lib/angular-animate/angular-animate.js"></script>
+    <script src="assets/lib/angular-aria/angular-aria.js"></script>
+    <script src="assets/lib/angular-cookies/angular-cookies.js"></script>
+    <script src="assets/lib/angular-messages/angular-messages.js"></script>
+    <script src="assets/lib/angular-resource/angular-resource.js"></script>
+    <script src="assets/lib/angular-route/angular-route.js"></script>
+    <script src="assets/lib/angular-sanitize/angular-sanitize.js"></script>
+    <script src="assets/lib/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="assets/lib/angular-touch/angular-touch.js"></script>
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="assets/lib/spin.js/spin.js"></script>
+    <script src="assets/lib/angular-loading/angular-loading.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js scripts/scripts.js -->
+   <!-- <script src="app/index.controller.js"></script>-->
+    <script src="app/utils/UtilApp.js"></script>
+    <script src="app/utils/constants.js"></script>    
+    <script src="app/utils/errorHandler.dacorator.js"></script>
+    <script src="app/utils/storageUtil.service.js"></script>
+    <script src="app/utils/httpErrorHandler.service.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/routes.config.js"></script>
+    <script src="app/shared/services/loginAuthentication.factory.js"></script>  
+    <script src="app/home/home.controller.js"></script>
+    <script src="app/home/home.service.js"></script>
+    <script src="app/login/login.controller.js"></script>
+    <script src="app/login/login.service.js"></script>
+    <script src="app/import/import.controller.js"></script>
+    <script src="app/import/import.service.js"></script>
+    <script src="app/export/export.controller.js"></script>
+    <script src="app/export/export.service.js"></script>
+    <script src="app/emailtemplate/emailtemplate.controller.js"></script>
+    <script src="app/emailtemplate/emailtemplate.service.js"></script>
+    <script src="app/backup/backup.controller.js"></script>
+    <script src="app/backup/backup.service.js"></script>
+    <script src="app/mail/mail.controller.js"></script>
+    <script src="app/mail/mail.service.js"></script>
+    <script src="app/payment/payment.controller.js"></script>
+    <script src="app/payment/payment.service.js"></script>
+    <script src="app/storage/storage.controller.js"></script>
+    <script src="app/storage/storage.service.js"></script>
+    <script src="app/basic/basic.service.js"></script>
+    <script src="app/basic/basic.controller.js"></script>
+    <script src="app/header/header.controller.js"></script>
+    <script src="app/navigation/navigation.controller.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

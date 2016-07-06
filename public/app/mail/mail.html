@@ -1,0 +1,62 @@
+<ul class="nav nav-tabs">
+<!-- {{mailCtrl.$route.current.activetab == 'mail'}} -->
+	<li>
+		<a href="/social">Social</a>
+	</li>
+	<li  class="active"><!-- ng-class="{active: mailCtrl.$route.current.activetab == 'mail'}" -->
+		<a href="/mail">Mail</a>
+	</li>
+	<li class="">
+		<a href="/payment">Payment</a>
+	</li>
+	<li class="">
+		<a href="/storage">Storage</a>
+	</li>
+	<li class="">
+		<a href="/basic">Basic</a>
+	</li>
+</ul>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">
+			Mail
+		</h3>
+</div>
+<div class="panel-body">
+					<div class="row">
+						<form name="userForm1" novalidate>
+						 <div class="col-sm-2" style="padding-left: 5%;"><!-- style="display:table-cell; vertical-align:middle; text-align:center;border: 1px ;" -->
+							<img src="../assets/images/rsz_gmail8.png" class="img-responsive img-rounded">
+						</div> 
+						 <!-- <div class="col-sm-2">
+		          <button class="btn btn-round btn-social-icon btn-facebook">
+		           	<i class="fa fa-facebook"></i>
+		          </button>
+             </div> -->
+						<div class="col-sm-10">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<input type="text" class="form-control" name="GmailUserId" ng-model="mailCtrl.username" ng-disabled="mailCtrl.showGmail" value="" placeholder="Username" required>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<input type="password" class="form-control" name="GmailPassword" ng-model="mailCtrl.GmailPasssword" ng-disabled="mailCtrl.showGmail" value="" placeholder="App Secret" required>
+									</div>
+								</div>
+							</div>
+						</div>
+						</form>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<div class="btn-group pull-right">
+						<button type="button" name="SaveMail" class="btn btn-primary btn-sm" ng-hide="mailCtrl.showGmail" 
+						style="margin-right:5px;width:61px;height:30px;"ng-click="mailCtrl.saveMailData()">Save</button>
+						<button type="button" name="CancelMail" class="btn btn-danger btn-sm" ng-hide="mailCtrl.showGmail" ng-click="mailCtrl.toggleFlag()">Cancel</button>
+						<button type="button" name="EditMail" class="btn btn-warning btn-sm" ng-show="mailCtrl.showGmail" ng-click="mailCtrl.toggleFlag()" style="width:61px;height:30px;"> Edit </button>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+</div>

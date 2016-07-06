@@ -1,0 +1,19 @@
+[{
+	"env_ip": "127.0.0.1",
+	"env_port": "8000",
+	"key": "node_app_ip",
+	"value": "127.0.0.1",
+	"type": "single"
+}, {
+	"env_ip": "127.0.0.1",
+	"env_port": "8000",
+	"key": "node_app_port",
+	"value": "8000",
+	"type": "single"
+}, {
+	"env_ip": "127.0.0.1",
+	"env_port": "8000",
+	"key": "node_app_use",
+	"value": "http",
+	"type": "single"
+}]
